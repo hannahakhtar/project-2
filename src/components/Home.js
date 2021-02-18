@@ -11,7 +11,7 @@ export default function Home() {
           <Link
             to={{
               pathname: '/project-2/allCocktails/'
-            }} >
+            }}>
             <button className="button is-rounded is-medium">All cockails</button>
           </Link>
         </div>

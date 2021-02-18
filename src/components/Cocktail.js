@@ -17,7 +17,6 @@ export default function Cocktail({ location }) {
       }
     })
   }
-
   callIngredients()
 
   function callMeasures() {
@@ -28,7 +27,6 @@ export default function Cocktail({ location }) {
     })
   }
   callMeasures()
-
 
   return <div className="allText">
     <Navbar />

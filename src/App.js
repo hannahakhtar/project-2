@@ -15,7 +15,6 @@ import './styles/style.scss'
 
 const App = () => {
   return <BrowserRouter>
-
     <Switch>
       <Route exact path="/project-2" component={Home} />
       <Route exact path="/project-2/cocktailgenerator" component={RandomCocktail} />

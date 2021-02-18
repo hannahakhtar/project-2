@@ -20,7 +20,6 @@ export default function Cocktails() {
 
   function getCocktail(cocktails) {
     const tempArray = []
-
     cocktails.forEach(cocktail => {
       axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktail.idDrink}`)
         .then(({ data }) => {
