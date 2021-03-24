@@ -8,7 +8,7 @@ by [Hannah Akhtar](https://github.com/hannahakhtar) and [Kate Joyce](https://git
 
 InsBARation was a 48 hour paired hackathon, which was the second project at General Assembly's Software Engineering Immersive.
 
-Kate and I created a cocktail website, using TheCocktailDB API. This was deployed via GitHub Pages and can be launched on [GitHub Pages](https://hannahakhtar.github.io/project-2/).
+Kate and I created a cocktail website, using TheCocktailDB API. This was deployed via GitHub Pages and can be launched [here](https://hannahakhtar.github.io/project-2/).
 
 ## Project Brief
 
@@ -18,7 +18,7 @@ Kate and I created a cocktail website, using TheCocktailDB API. This was deploye
 
 ## Technogies Used
 
-- HTML
+- HTML5
 - SCSS & Bulma
 - JavaScript (ES6)
 - React & React Router
@@ -26,20 +26,20 @@ Kate and I created a cocktail website, using TheCocktailDB API. This was deploye
 - Git & GitHub
 - [TheCocktailDB API](https://www.thecocktaildb.com/api.php)
 
-## The Approach
+## Approach
 
-We researched a number of APIs and decided to make a website showcasing a number of cocktails and instructions for how to make them. Given this was built during the national lockdown, we thought it would be a useful website to send to our family and friends to use!
+We researched a number of APIs and decided to make a website showcasing cocktails and their recipes. Given this was built during a national lockdown, we thought it would be a useful website to send to our family and friends to use!
 
-For the design, we decided to display a homepage with a button for the user to view all 100 cocktails, with the name and image of these. From here, the user is able to click on a specific cocktail to view more information, filter by main ingredient or click on a button for a randomly generated cocktail.
+For the design, the homepage was a hero with a button for the user to view all 100 cocktails, with the name and image of these. From here, users able to click on a specific cocktail to view more information, filter by main ingredient or click on a button for a randomly generated cocktail.
 
-We agreed that we wanted to pair programme as we would be doing this in industry, and below was our plan for the 48 hours:
+Kate and I decided to pair programme as we would be doing this in industry, and below was our plan for the 48 hours:
 
 #### Day 1 (PM)
 
 - Choose API and use Insomnia to inspect responses
-- Balsamiq for simple wireframe
+- Balsamiq for wireframe
 - Create components and BrowserRouter
-- Creating React Hooks and state requirements
+- Create React Hooks and state requirements
 
 Screenshots of wireframe:
 
@@ -98,9 +98,9 @@ The navigation bar contained two a tags, which enabled the user to return to the
 
 We had chosen our API on the first afternoon, however once we started coding, we realised that the API was not providing the number of responses that we had expected (only 20). Therefore, I came up with an idea to reverse engineer the API using two different URLs, which would return the data we required.
 
-To display the 100 cocktails on the allCocktails page, we used an axios request from the API within the useEffect and updated the state of the hook. Due to the issues we faced originally, the only data provided was the cocktail name, an image and a unique ID.
+To display the 100 cocktails on the allCocktails page, we used an axios request from the API within the useEffect and updated the state of the hook. Due to the issues we faced initially, the only data provided was the cocktail name, an image and a unique ID.
 
-We needed to obtain further data about the ingredients and instructions, so we created the getCocktail function array which contained another axios request. Using the unique ID from the initial request, we were able to manipulate the URL so we could request the data for each cocktail.
+We needed to obtain further data about the ingredients and instructions, so we created the getCocktail function array which contained another axios request. Using the unique ID from the first request, we were able to manipulate the URL so we could request the data for each cocktail.
 
 The function was then called in the useEffect.
 
@@ -150,7 +150,7 @@ When the user changed the select option to filter by ingredient, the useState of
     return yourRandomCocktail
   }
 ```
-The variable RandomCocktail was created and set equal to goToRandom so the state could be passed to the RandomCocktail component via the below. The goToRandom function was called when the user clicks on the button to generate the random cocktail.
+The variable RandomCocktail was created and set equal to goToRandom so the state could be passed to the RandomCocktail component via the below. The goToRandom function is called when the user clicks the 'generate random cocktail' button.
 
 ```js
   <Link
@@ -165,15 +165,15 @@ The variable RandomCocktail was created and set equal to goToRandom so the state
 
 ### One cocktail and random cocktail pages
 
-When the user clicked on the cocktail they wanted to view, as the state had been passed through to the components, we created a variable called thisCocktail. which was the specific cocktail to display.
+When the user clicks on the cocktail they want to view, as the state had been passed through to the components, we created a variable called thisCocktail, which was the specific cocktail to display.
 
-One challenge we had with the API was the way in which it displayed the ingredients and measures. To counteract this, I used the Object.enteries method to turn the object into an array. We were then able to splice the array to create two new arrays for the ingredients and measures.
+One challenge we had with the API was the way in which it displayed the ingredients and measures. To counteract this, I used the Object.entries method to turn the object into an array. We were then able to splice the array to create two new arrays for the ingredients and measures.
 
-Once we had this, we then used the callIngredients and callMeasures functions to only push not null values to the allIngredients and allMeasures arrays.
+Once we had this, we then used the callIngredients and callMeasures functions to only push truthy values to the allIngredients and allMeasures arrays.
 
-The passed state and the two array were used to display the required information.
+The passed state and the two arrays were used to display the desired information.
 
-The same code was used for the random cocktail page, with slightly different naming conventions.
+This code was replicated for the random cocktail page, with slightly different naming conventions.
 
 ```js
 const thisCocktail = location.state.cocktail
@@ -214,10 +214,10 @@ const thisCocktail = location.state.cocktail
 ## Future feature ideas
 
 - Mobile responsive
-- Update design
+- Update styling
 - Include additonal filtering options for the cocktails
 
-## Screenshots
+## The Result
 
 Home Page view:
 ![Home Page image](/assets/Home.png)
