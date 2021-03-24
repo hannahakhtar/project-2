@@ -213,10 +213,10 @@ const thisCocktail = location.state.cocktail
 
 ## Future feature ideas
 
-- Add logo on Nav bar
 - Mobile responsive
-- Update styling
-- Include additonal filtering options for the cocktails
+- Add logo on Nav bar
+- Update styling for individual cocktails
+- Improve filtering options for all cocktails
 
 ## The Result
 
