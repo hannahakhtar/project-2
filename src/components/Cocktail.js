@@ -5,10 +5,14 @@ export default function Cocktail({ location }) {
 
   const thisCocktail = location.state.cocktail
   const cocktailArray = Object.entries(thisCocktail)
-  const rawIngredients = cocktailArray.splice(21, 15)
-  const rawMeasures = cocktailArray.splice(21, 15)
+  const rawIngredients = cocktailArray.splice(17, 15)
+  const rawMeasures = cocktailArray.splice(17, 15)
   const allIngredients = []
   const allMeasures = []
+
+  // console.log(cocktailArray)
+  console.log(rawIngredients)
+  console.log(rawMeasures)
 
   function callIngredients() {
     rawIngredients.map((ingredient) => {
