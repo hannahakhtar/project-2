@@ -207,9 +207,14 @@ const thisCocktail = location.state.cocktail
 - Reverse engineering the API to provide the data we required
 - We had only been learning React for just over a week so proud of the functionality we were able to achieve in the short timeframes.
 
-## Challenges and lessons learned 
+## Challenges
 
 - This project was the first time I had used Bulma, so it longer than anticipated for the design and due to the API challenges, we had less time for styling than planned. However, it is a great framework and can defintely see the advantages of using it for styling.
+
+## Lessons Learned
+
+- Given the short timeframe of the project, I learnt that value of planning throughougly and setting realistic goals i.e. a realistic MVP and then stretch goals.
+- This project was a great way to understand how to pass state between pages!
 
 ## Future feature ideas
 
